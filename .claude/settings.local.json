@@ -1,0 +1,43 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python tools/homoglyph_check.py:*)",
+      "Bash(python tools/fetch_pages.py:*)",
+      "Bash(python tools/parse_serp.py:*)",
+      "Bash(python tools/new_niche.py:*)",
+      "Read(//Users/aannenkov/Downloads/**)",
+      "Bash(python3 -c \"import openpyxl; wb=openpyxl.load_workbook\\('serp-extra-7.xlsx', read_only=True\\); print\\('SHEETS:', wb.sheetnames\\); [print\\('---', s, wb[s].max_row, 'rows x', wb[s].max_column, 'cols'\\) for s in wb.sheetnames]\")",
+      "Bash(python3 tools/new_niche.py --help)",
+      "Bash(python3 -c ' *)",
+      "Bash(python3 tools/new_niche.py --slug gordes1 --niche-name 'Анализ смывов на ОМЧ и камерная дезинфекция' --domain gordes1.ru --lang Русский --market 'Яндекс / РФ' --page-type 'коммерческие посадочные' --humanizer ru-adapt --dest ../tripl-gordes1-new)"
+    ]
+  },
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write|MultiEdit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node .claude/skills/impeccable/scripts/hook.mjs",
+            "timeout": 5,
+            "statusMessage": "Checking UI changes"
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node .claude/skills/impeccable/scripts/hook.mjs",
+            "timeout": 30,
+            "statusMessage": "Design deep pass"
+          }
+        ]
+      }
+    ]
+  },
+  "description": "Impeccable design detector: immediate-tier checks after Edit/Write/MultiEdit on UI files, full-rule deep pass on Stop. Hook path is relative (cross-platform: works under cmd/PowerShell/bash with CWD at project root); node reads CLAUDE_PROJECT_DIR from env internally, so no shell variable expansion is needed."
+}
