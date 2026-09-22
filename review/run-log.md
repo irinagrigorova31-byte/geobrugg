@@ -25,6 +25,8 @@
 | 2026-09-22 | 5 · copywriter (Блок 3) | copywriter (inline, humanizer ru-adapt + project-geobrugg) | ✅ | drafts/page-01.md написан по ТЗ-01; гомоглифы чисто; заглушка кейсов на месте; без цен/сертификатов; «до 90 лет» условно |
 | 2026-09-22 | 6 · gist-auditor ⟳ | gist-auditor (inline) | ✅ 1 итерация | review/audit-01.md: тесты заменимости/первой трети/точек отказа пройдены; FAQ-фильтр — 1 мелкая правка применена (дубль FAQ заменён на вопрос про сегменты). Статус: готово к публикации |
 | 2026-09-22 | 7 · cluster-inspector | cluster-inspector (inline) | ⛔ ВОРОТА Блока 3 | review/cluster-report.md: серия из 1 pillar — состоятельна, каннибализации нет |
+| 2026-09-22 | текст: клиентская правка + атрибуция | — | ✅ | принят исправленный клиентом текст page-01; возвращена атрибуция «по данным Геобругг» в citation-target; gist-auditor по решению клиента не гоняли |
+| 2026-09-22 | 8 · schema-markup (Блок 4) | schema-markup (inline) | ✅ | JSON-LD в page-01 под ## РАЗМЕТКА (@graph 8 узлов: Organization+WebPage+Service+3 Product+FAQPage+BreadcrumbList); warranty 1 год на Offer, срок 90 лет — additionalProperty, sameAs из entities, parentOrganization Geobrugg AG; JSON валиден, гомоглиф-опечатка @id поймана и исправлена. review/schema-report.md (флаг: NAP-футер нужен для word-for-word). data/triplets.json (задача B, 12 триплетов). ⚠️ page-builder: вывести NAP в подвал |
 
 ## Заметки для последующих этапов
 - Выгрузка тонкая: реальный топ есть только по «борьба с оползнями» (инфо-доминантный SERP).

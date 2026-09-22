@@ -1,0 +1,33 @@
+{
+  "meta": {
+    "project": "Геобругг — противооползневая защита",
+    "cluster": 1,
+    "converted": "2026-09-22",
+    "sources": ["data/triplets.md", "data/entities.md", "drafts/page-01.md"],
+    "frequency_base": "11 доменов-конкурентов кластера 1",
+    "note": "Копия ключевых триплетов матрицы (markdown-таблицы — первоисточник). own-числа verified (сайт/ЕГРЮЛ), competitor-числа to-check."
+  },
+  "triplets": [
+    {"subject":"оползень","predicate":"это","object":"смещение грунтовых/породных масс вниз по склону под действием силы тяжести","source":"reverse competitors","frequency":"7/11","status":"obligatory","irreplaceable":false,"embedded_in":["text"],"date":"2026-09-20"},
+    {"subject":"противооползневая защита","predicate":"включает","object":"отвод воды и дренаж, понижение УГВ","source":"reverse","frequency":"6/11","status":"obligatory","irreplaceable":false,"embedded_in":["text","schema"],"date":"2026-09-20"},
+    {"subject":"противооползневая защита","predicate":"включает","object":"удерживающие сооружения: подпорные стены, сваи, анкеры, контрбанкет","source":"reverse","frequency":"7/11","status":"obligatory","irreplaceable":false,"embedded_in":["text","schema"],"date":"2026-09-20"},
+    {"subject":"противооползневая защита","predicate":"включает","object":"изменение рельефа: террасирование, срезка верха + пригрузка низа","source":"reverse","frequency":"6/11","status":"obligatory","irreplaceable":false,"embedded_in":["text"],"date":"2026-09-20"},
+    {"subject":"защита от оползней","predicate":"требует","object":"инженерно-геологических изысканий и расчёта устойчивости до работ","source":"reverse","frequency":"6/11","status":"obligatory","irreplaceable":false,"embedded_in":["text"],"date":"2026-09-20"},
+    {"subject":"Геобругг: системы","predicate":"изготовлены из стали прочностью","object":"свыше 1770 Н/мм²","source":"https://геобругг.рф/about/","frequency":null,"status":"differentiator","irreplaceable":true,"entity_id":"geobrugg","embedded_in":["text","schema"],"date":"2026-09-22"},
+    {"subject":"Геобругг: покрытия SUPERCOATING/ULTRACOATING (Zn/Al)","predicate":"увеличивают срок службы","object":"до 5 раз vs обычное цинкование","source":"https://геобругг.рф/about/","frequency":null,"status":"differentiator","irreplaceable":true,"entity_id":"geobrugg","embedded_in":["text"],"date":"2026-09-22"},
+    {"subject":"Геобругг: расчётный срок полезной эксплуатации","predicate":"достигает","object":"до 90 лет в зависимости от агрессивности среды","source":"клиент 2026-09-22","frequency":null,"status":"differentiator","irreplaceable":true,"entity_id":"geobrugg","embedded_in":["text","schema"],"date":"2026-09-22"},
+    {"subject":"Геобругг: барьеры от камнепадов","predicate":"рассчитываются на классы энергии","object":"до 3000 или до 10 000 кДж","source":"https://геобругг.рф/about/","frequency":null,"status":"differentiator","irreplaceable":true,"entity_id":"geobrugg","embedded_in":["text","schema"],"date":"2026-09-22"},
+    {"subject":"Геобругг: TECCO®","predicate":"сетка из высокопрочной проволоки диаметром","object":"2, 3 или 4 мм","source":"https://геобругг.рф/ukreplenie-sklonov/ukreplenie-sklonov-tecco/","frequency":null,"status":"differentiator","irreplaceable":true,"entity_id":"geobrugg","embedded_in":["text","schema"],"date":"2026-09-22"},
+    {"subject":"Геобругг","predicate":"гарантия на работы","object":"1 год (стандартная строительная)","source":"клиент 2026-09-22","frequency":null,"status":"obligatory","irreplaceable":false,"entity_id":"geobrugg","embedded_in":["text","schema"],"date":"2026-09-22"},
+    {"subject":"Геобругг","predicate":"производство локализовано","object":"Краснодар, с 2016; часть группы Geobrugg AG (CHE-100.826.058, 30%)","source":"ЕГРЮЛ 20.09.2026 + сайт","frequency":null,"status":"differentiator","irreplaceable":true,"entity_id":"geobrugg","embedded_in":["text","schema","external"],"date":"2026-09-22"}
+  ],
+  "entities": [
+    {"canonical_name":"ООО \"ГЕОБРУГГ\"","type":"organization","wikidata_q":null,"same_as":["https://yandex.ru/profile/179313910568","https://yandex.ru/maps/org/geobrugg/179313910568/","https://go.2gis.com/wRv2v"],"aliases":["Геобругг","Geobrugg Россия"],"inn":"7729499736","ogrn":"1167746305209"},
+    {"canonical_name":"Geobrugg AG","type":"organization (parent, Швейцария)","wikidata_q":null,"identifier":"CHE-100.826.058","same_as":[],"aliases":["ГЕОБРУГГ АГ"]},
+    {"canonical_name":"Оползень","type":"природный процесс","wikidata_q":null,"same_as":[],"aliases":["сползание грунта"]}
+  ],
+  "conflicts": [
+    {"predicate":"антикоррозионное покрытие / срок","values":{"road-stroy.com":"Гальфан, ×2–3 vs цинк","геобругг.рф":"SUPERCOATING/ULTRACOATING (Zn/Al), до ×5"},"note":"дифференциатор own"},
+    {"predicate":"происхождение системы","values":{"geobarrier.ru":"2Д-Гео, создано в России","геобругг.рф":"локализация в Краснодаре 2016, группа Geobrugg AG"},"note":"ответ на импортозамещение"}
+  ]
+}

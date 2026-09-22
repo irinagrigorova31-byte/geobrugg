@@ -98,3 +98,133 @@ SPIDER® — канатная сеть для скальных выступов,
 ---
 
 *Стоимость и состав решения рассчитываются под конкретный проект. Оставьте заявку — специалисты подберут систему по параметрам вашего склона.*
+
+## РАЗМЕТКА
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://геобругг.рф/#org",
+      "name": "Геобругг",
+      "legalName": "ООО \"ГЕОБРУГГ\"",
+      "url": "https://геобругг.рф/",
+      "telephone": "+7 495 664 54 36",
+      "email": "info@geobruggrussia.com",
+      "taxID": "7729499736",
+      "address": {
+        "@type": "PostalAddress",
+        "postalCode": "101000",
+        "addressLocality": "Москва",
+        "streetAddress": "ул. Мясницкая, д. 16, помещ. 1/4",
+        "addressCountry": "RU"
+      },
+      "parentOrganization": {
+        "@type": "Organization",
+        "name": "Geobrugg AG",
+        "identifier": "CHE-100.826.058",
+        "address": { "@type": "PostalAddress", "addressCountry": "CH" }
+      },
+      "sameAs": [
+        "https://yandex.ru/profile/179313910568",
+        "https://yandex.ru/maps/org/geobrugg/179313910568/",
+        "https://go.2gis.com/wRv2v"
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://геобругг.рф/protivoopolznevaya-zashchita/#webpage",
+      "url": "https://геобругг.рф/protivoopolznevaya-zashchita/",
+      "name": "Противооползневая защита: системы инженерной защиты от оползней",
+      "inLanguage": "ru",
+      "dateModified": "2026-09-22",
+      "about": { "@id": "https://геобругг.рф/protivoopolznevaya-zashchita/#service" },
+      "isPartOf": { "@id": "https://геобругг.рф/#org" }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://геобругг.рф/protivoopolznevaya-zashchita/#service",
+      "name": "Противооползневая защита",
+      "serviceType": "Инженерная защита от оползней",
+      "provider": { "@id": "https://геобругг.рф/#org" },
+      "areaServed": { "@type": "Country", "name": "Россия" },
+      "description": "Отвод воды со склона, удерживающие сооружения и гибкие системы из высокопрочной стали, которые не дают грунту и породе сползать вниз.",
+      "offers": {
+        "@type": "Offer",
+        "availability": "https://schema.org/InStock",
+        "warranty": {
+          "@type": "WarrantyPromise",
+          "durationOfWarranty": { "@type": "QuantitativeValue", "value": 1, "unitCode": "ANN" }
+        }
+      }
+    },
+    {
+      "@type": "Product",
+      "name": "TECCO®",
+      "brand": { "@type": "Brand", "name": "Геобругг" },
+      "manufacturer": { "@id": "https://геобругг.рф/#org" },
+      "description": "Активная система стабилизации склонов на основе сетки из высокопрочной стальной проволоки диаметром 2, 3 или 4 мм.",
+      "additionalProperty": [
+        { "@type": "PropertyValue", "name": "Прочность стали", "value": "свыше 1770 Н/мм²" },
+        { "@type": "PropertyValue", "name": "Расчётный срок полезной эксплуатации", "value": "до 90 лет в зависимости от агрессивности среды" }
+      ]
+    },
+    {
+      "@type": "Product",
+      "name": "SPIDER®",
+      "brand": { "@type": "Brand", "name": "Геобругг" },
+      "manufacturer": { "@id": "https://геобругг.рф/#org" },
+      "description": "Канатная сеть для скальных выступов, отдельных блоков и участков с неровной поверхностью."
+    },
+    {
+      "@type": "Product",
+      "name": "Барьеры от камнепадов",
+      "brand": { "@type": "Brand", "name": "Геобругг" },
+      "manufacturer": { "@id": "https://геобругг.рф/#org" },
+      "description": "Улавливают падающие камни и рассеивают энергию удара.",
+      "additionalProperty": [
+        { "@type": "PropertyValue", "name": "Класс энергии удара", "value": "до 3000 или до 10 000 кДж" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Сколько служат системы защиты от оползней?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Расчётный срок полезной эксплуатации систем «Геобругг» достигает 90 лет и зависит от агрессивности среды — его определяют индивидуально. Стандартная строительная гарантия на выполненные работы — один год." }
+        },
+        {
+          "@type": "Question",
+          "name": "Чем гибкая стальная сетка отличается от габиона или подпорной стены?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Это активная система: высокопрочная сетка закрепляется анкерами и прижимает поверхность склона, а не удерживает массив весом, как габион или стена. За счёт прочности стали и покрытия она служит дольше и монтируется без тяжёлой техники." }
+        },
+        {
+          "@type": "Question",
+          "name": "Нужны ли изыскания перед защитой склона?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Да. Подобрать систему и рассчитать её без инженерно-геологических изысканий и оценки устойчивости склона нельзя." }
+        },
+        {
+          "@type": "Question",
+          "name": "Для каких объектов подходит защита от оползней?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Системы применяют на склонах вдоль автомобильных и железных дорог, на берегах водоёмов, на участках у зданий и на промышленных площадках. Тип системы и её параметры подбирают под конкретный объект и характер склона." }
+        },
+        {
+          "@type": "Question",
+          "name": "Российское это производство или импорт?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Системы производят в России, на площадке в Краснодаре. Производство входит в швейцарскую группу Geobrugg." }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Главная", "item": "https://геобругг.рф/" },
+        { "@type": "ListItem", "position": 2, "name": "Противооползневая защита", "item": "https://геобругг.рф/protivoopolznevaya-zashchita/" }
+      ]
+    }
+  ]
+}
+</script>
