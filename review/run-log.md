@@ -27,6 +27,7 @@
 | 2026-09-22 | 7 · cluster-inspector | cluster-inspector (inline) | ⛔ ВОРОТА Блока 3 | review/cluster-report.md: серия из 1 pillar — состоятельна, каннибализации нет |
 | 2026-09-22 | текст: клиентская правка + атрибуция | — | ✅ | принят исправленный клиентом текст page-01; возвращена атрибуция «по данным Геобругг» в citation-target; gist-auditor по решению клиента не гоняли |
 | 2026-09-22 | 8 · schema-markup (Блок 4) | schema-markup (inline) | ✅ | JSON-LD в page-01 под ## РАЗМЕТКА (@graph 8 узлов: Organization+WebPage+Service+3 Product+FAQPage+BreadcrumbList); warranty 1 год на Offer, срок 90 лет — additionalProperty, sameAs из entities, parentOrganization Geobrugg AG; JSON валиден, гомоглиф-опечатка @id поймана и исправлена. review/schema-report.md (флаг: NAP-футер нужен для word-for-word). data/triplets.json (задача B, 12 триплетов). ⚠️ page-builder: вывести NAP в подвал |
+| 2026-09-22 | 8 · infographic-maker (Блок 4) | infographic-maker (inline) | ✅ | 2 SVG в assets/infographics/: page-01-1 (дерево решений «какая защита при каком склоне» — ветвление), page-01-2 (пропорция «покрытие Zn/Al — срок службы до ×5»). Системные шрифты, без внешних зависимостей, real <text>, гомоглифы чисто. placement-файл готов. Не делал: классы энергии (лучше таблицей), «как работаем» (уже в тексте) |
 
 ## Заметки для последующих этапов
 - Выгрузка тонкая: реальный топ есть только по «борьба с оползнями» (инфо-доминантный SERP).

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 200" role="img" aria-labelledby="ttl2 desc2" font-family="'PT Sans', system-ui, -apple-system, sans-serif">
+  <title id="ttl2">Срок службы покрытия: цинкование против Zn/Al</title>
+  <desc id="desc2">Сравнение относительного срока службы обычного цинкования и покрытий на основе сплава цинк-алюминий: до пяти раз дольше.</desc>
+  <rect x="0" y="0" width="360" height="200" fill="#ffffff"/>
+  <text x="16" y="26" font-family="'Manrope', system-ui, sans-serif" font-size="17" font-weight="800" fill="#141414">Срок службы покрытия</text>
+
+  <!-- base bar: обычное цинкование = 1 -->
+  <text x="16" y="70" font-size="12.5" fill="#5f6266">Обычное цинкование</text>
+  <rect x="16" y="78" width="52" height="26" fill="#c9ccd4"/>
+  <text x="76" y="96" font-size="12.5" fill="#141414">1×</text>
+
+  <!-- Zn/Al bar = up to 5 -->
+  <text x="16" y="132" font-size="12.5" fill="#5f6266">Покрытие Zn/Al (SUPERCOATING / ULTRACOATING)</text>
+  <rect x="16" y="140" width="260" height="26" fill="#2b3a8c"/>
+  <text x="284" y="158" font-size="13" font-weight="700" fill="#141414">до 5×</text>
+
+  <text x="16" y="190" font-size="12" fill="#5f6266">Срок службы конструкции — до пяти раз дольше, чем при обычном цинковании.</text>
+</svg>
