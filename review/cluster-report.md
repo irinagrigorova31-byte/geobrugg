@@ -1,6 +1,6 @@
 # Cluster-inspector — серия кластера 1
 
-Дата: 2026-09-22. Проверка симметрии/каннибализации (III-7) по data/interlinks.md.
+Дата: 2026-09-22 (перезапуск на финальном тексте page-01: клиентская правка + возвращённая атрибуция citation-target). Проверка симметрии/каннибализации (III-7) по data/interlinks.md и drafts/.
 
 ## Состав серии
 Одна страница — pillar `/protivoopolznevaya-zashchita/` (drafts/page-01.md). Дочерние отложены (нужен их SERP).
