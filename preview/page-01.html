@@ -201,6 +201,13 @@ img,svg{max-width:100%;display:block}
 .card{position:relative;min-height:300px;box-shadow:var(--shadow-card);border-radius:0;overflow:hidden;
       display:flex;flex-direction:column;justify-content:flex-end;color:#fff;text-decoration:none}
 .card-media{position:absolute;inset:0}
+img.card-media{width:100%;height:100%;object-fit:cover}
+.card-eyebrow{display:block;font-family:var(--text);font-weight:700;font-size:13px;letter-spacing:.03em;color:#c9d0f5;margin-bottom:6px}
+.card-year{color:#eef0fa;font-size:15px;margin:0}
+.cards-cases{grid-template-columns:repeat(3,1fr)}
+.cards-cases .card{min-height:240px}
+@media(max-width:900px){.cards-cases{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.cards-cases{grid-template-columns:1fr}}
 .card-scrim{position:absolute;inset:0;background:linear-gradient(180deg,rgba(9,11,26,.05) 30%,rgba(9,11,26,.78) 100%)}
 .card-body{position:relative;padding:24px}
 .card-body h3{color:#fff;margin-bottom:8px}
@@ -457,9 +464,84 @@ tbody th{font-weight:700}
   <section class="section section-sub">
     <div class="wrap">
       <h2>Реализованные проекты</h2>
-      <p class="req">[ТРЕБУЕТСЯ: кейсы клиента]</p>
-      <!-- Шаблон карточки на каждый проект (заполняет клиент, не выдумывать):
-        Объект · Регион · Применённая система (TECCO® / SPIDER® / барьер / берегоукрепление) · Объём (м² / пог. м) · Год · Результат -->
+      <p class="note">Объекты инженерной защиты, реализованные ООО «ГЕОБРУГГ» на территории России.</p>
+      <div class="cards cards-cases">
+        <div class="card">
+          <img class="card-media" src="/wp-content/uploads/2024/12/2017.-sistema-ukrepleniya-sklonov.jpg" alt="Система инженерной защиты — Система укрепления склонов, 2017" loading="lazy">
+          <div class="card-scrim"></div>
+          <div class="card-body"><span class="card-eyebrow">Система инженерной защиты</span><h3>Система укрепления склонов</h3><p class="card-year">Год установки: 2017</p></div>
+        </div>
+        <div class="card">
+          <img class="card-media" src="/wp-content/uploads/2024/04/1.-minax%C2%AE-g65-3-2023.jpg" alt="Система инженерной защиты — Противокамнепадная завеса, 2023" loading="lazy">
+          <div class="card-scrim"></div>
+          <div class="card-body"><span class="card-eyebrow">Система инженерной защиты</span><h3>Противокамнепадная завеса</h3><p class="card-year">Год установки: 2023</p></div>
+        </div>
+        <div class="card">
+          <img class="card-media" src="/wp-content/uploads/2024/04/2.-rxe-2022-scaled.jpg" alt="Система инженерной защиты — Противокамнепадный барьер до 10 000 кДж, 2022" loading="lazy">
+          <div class="card-scrim"></div>
+          <div class="card-body"><span class="card-eyebrow">Система инженерной защиты</span><h3>Противокамнепадный барьер до 10 000 кДж</h3><p class="card-year">Год установки: 2022</p></div>
+        </div>
+        <div class="card">
+          <img class="card-media" src="/wp-content/uploads/2024/04/3.-fia-debris-fence-2021-1-scaled.jpg" alt="Система инженерной защиты — Motorsport FIA защитные ограждения, 2021" loading="lazy">
+          <div class="card-scrim"></div>
+          <div class="card-body"><span class="card-eyebrow">Система инженерной защиты</span><h3>Motorsport FIA защитные ограждения</h3><p class="card-year">Год установки: 2021</p></div>
+        </div>
+        <div class="card">
+          <img class="card-media" src="/wp-content/uploads/2024/04/4.-quarox%C2%AE-plus-2021-scaled.jpg" alt="Система инженерной защиты — Противокамнепадная завеса, 2021" loading="lazy">
+          <div class="card-scrim"></div>
+          <div class="card-body"><span class="card-eyebrow">Система инженерной защиты</span><h3>Противокамнепадная завеса</h3><p class="card-year">Год установки: 2021</p></div>
+        </div>
+        <div class="card">
+          <img class="card-media" src="/wp-content/uploads/2024/04/5.-tecco%C2%AE-drape-g65-3-2020-scaled.jpg" alt="Система инженерной защиты — Противокамнепадная завеса, 2020" loading="lazy">
+          <div class="card-scrim"></div>
+          <div class="card-body"><span class="card-eyebrow">Система инженерной защиты</span><h3>Противокамнепадная завеса</h3><p class="card-year">Год установки: 2020</p></div>
+        </div>
+        <div class="card">
+          <img class="card-media" src="/wp-content/uploads/2024/04/6.-quarox%C2%AE-2019-scaled.jpg" alt="Система инженерной защиты — Противокамнепадная завеса, 2019" loading="lazy">
+          <div class="card-scrim"></div>
+          <div class="card-body"><span class="card-eyebrow">Система инженерной защиты</span><h3>Противокамнепадная завеса</h3><p class="card-year">Год установки: 2019</p></div>
+        </div>
+        <div class="card">
+          <img class="card-media" src="/wp-content/uploads/2024/04/7.-minax%C2%AE-80-3-2018-scaled.jpg" alt="Система инженерной защиты — Укрепление сводов: сеть 80/3, 2018" loading="lazy">
+          <div class="card-scrim"></div>
+          <div class="card-body"><span class="card-eyebrow">Система инженерной защиты</span><h3>Укрепление сводов: сеть 80/3</h3><p class="card-year">Год установки: 2018</p></div>
+        </div>
+        <div class="card">
+          <img class="card-media" src="/wp-content/uploads/2024/04/8.-tecco%C2%AE-65-3-2018.jpg" alt="Система инженерной защиты — Система укрепления склонов, 2018" loading="lazy">
+          <div class="card-scrim"></div>
+          <div class="card-body"><span class="card-eyebrow">Система инженерной защиты</span><h3>Система укрепления склонов</h3><p class="card-year">Год установки: 2018</p></div>
+        </div>
+        <div class="card">
+          <img class="card-media" src="/wp-content/uploads/2024/04/9.-spider%C2%AE-avalanche-2018-scaled.jpg" alt="Система инженерной защиты — Снегоудерживающий барьер, 2018" loading="lazy">
+          <div class="card-scrim"></div>
+          <div class="card-body"><span class="card-eyebrow">Система инженерной защиты</span><h3>Снегоудерживающий барьер</h3><p class="card-year">Год установки: 2018</p></div>
+        </div>
+        <div class="card">
+          <img class="card-media" src="/wp-content/uploads/2024/12/2017.snegouderzhivayushhij-barer.webp" alt="Система инженерной защиты — Снегоудерживающий барьер, 2017" loading="lazy">
+          <div class="card-scrim"></div>
+          <div class="card-body"><span class="card-eyebrow">Система инженерной защиты</span><h3>Снегоудерживающий барьер</h3><p class="card-year">Год установки: 2017</p></div>
+        </div>
+        <div class="card">
+          <img class="card-media" src="/wp-content/uploads/2024/04/10.-fia-debris-fence-2014-scaled.jpg" alt="Система инженерной защиты — Motorsport FIA защитные ограждения, 2014" loading="lazy">
+          <div class="card-scrim"></div>
+          <div class="card-body"><span class="card-eyebrow">Система инженерной защиты</span><h3>Motorsport FIA защитные ограждения</h3><p class="card-year">Год установки: 2014</p></div>
+        </div>
+        <div class="card">
+          <img class="card-media" src="/wp-content/uploads/2024/04/11.-ux180-h6-2013-scaled.jpg" alt="Система инженерной защиты — Селеудерживающий барьер, 2013" loading="lazy">
+          <div class="card-scrim"></div>
+          <div class="card-body"><span class="card-eyebrow">Система инженерной защиты</span><h3>Селеудерживающий барьер</h3><p class="card-year">Год установки: 2013</p></div>
+        </div>
+        <div class="card">
+          <img class="card-media" src="/wp-content/uploads/2024/04/12.-ux180-h6-2012-scaled.jpg" alt="Система инженерной защиты — Селеудерживающий барьер, 2012" loading="lazy">
+          <div class="card-scrim"></div>
+          <div class="card-body"><span class="card-eyebrow">Система инженерной защиты</span><h3>Селеудерживающий барьер</h3><p class="card-year">Год установки: 2012</p></div>
+        </div>
+        <div class="card">
+          <img class="card-media" src="/wp-content/uploads/2024/04/13.-tecco%C2%AE-g65-3-2011.jpg" alt="Система инженерной защиты — Система укрепления склонов, 2011" loading="lazy">
+          <div class="card-scrim"></div>
+          <div class="card-body"><span class="card-eyebrow">Система инженерной защиты</span><h3>Система укрепления склонов</h3><p class="card-year">Год установки: 2011</p></div>
+        </div>
+      </div>
     </div>
   </section>
 
