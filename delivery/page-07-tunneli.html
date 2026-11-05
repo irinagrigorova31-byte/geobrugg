@@ -102,22 +102,6 @@
   --text:"PT Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
   --gutter:16px; --maxw:1120px;
 }
-@media (prefers-color-scheme: dark){
-  :root:not([data-theme="light"]){
-    --surface:#14161d; --surface-sub:#1e212b; --surface-navy:#2b3a8c; --surface-navy-deep:#12142e;
-    --ink:#f2f4f8; --ink-muted:#abb0bd; --on-navy:#ffffff; --on-navy-muted:#c8cde3;
-    --red:#ec4a4a; --navy:#3f51bf; --link:#93a3ea; --border:#2b2f3b; --field-border:#6e7484; --focus:#93a3ea;
-    --shadow-card:0 1px 3px rgba(0,0,0,.55), 0 8px 20px rgba(0,0,0,.45);
-    --shadow-float:0 10px 28px rgba(0,0,0,.65);
-  }
-}
-:root[data-theme="dark"]{
-  --surface:#14161d; --surface-sub:#1e212b; --surface-navy:#2b3a8c; --surface-navy-deep:#12142e;
-  --ink:#f2f4f8; --ink-muted:#abb0bd; --on-navy:#ffffff; --on-navy-muted:#c8cde3;
-  --red:#ec4a4a; --navy:#3f51bf; --link:#93a3ea; --border:#2b2f3b; --field-border:#6e7484; --focus:#93a3ea;
-  --shadow-card:0 1px 3px rgba(0,0,0,.55), 0 8px 20px rgba(0,0,0,.45);
-  --shadow-float:0 10px 28px rgba(0,0,0,.65);
-}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{margin:0;background:var(--surface);color:var(--ink);font-family:var(--text);font-size:16px;line-height:26px;-webkit-font-smoothing:antialiased}
@@ -140,6 +124,11 @@ img,svg{max-width:100%;display:block}
 .article ul{margin:0 0 16px;padding-left:22px}
 .article li{margin-bottom:8px}
 .article .author{color:var(--ink-muted);font-style:italic;margin-top:20px}
+.article .art-acc{border-top:1px solid var(--border);border-bottom:1px solid var(--border);margin-top:8px}
+.article .art-acc>summary{cursor:pointer;list-style:none;font-family:var(--display);font-weight:800;font-size:26px;line-height:32px;color:var(--ink);padding:18px 44px 18px 0;position:relative}
+.article .art-acc>summary::-webkit-details-marker{display:none}
+.article .art-acc>summary::after{content:"+";position:absolute;right:6px;top:14px;font-size:30px;color:var(--navy);font-weight:700}
+.article .art-acc[open]>summary::after{content:"–"}
 
 /* header */
 .site-header{position:sticky;top:0;z-index:40;background:var(--surface);border-bottom:1px solid var(--border)}
@@ -147,8 +136,6 @@ img,svg{max-width:100%;display:block}
 .brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink)}
 .brand-name{font-family:var(--display);font-weight:800;font-size:22px;letter-spacing:.02em}
 .brand-logo{height:30px;width:auto;display:block;border-radius:4px}
-@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .brand-logo{background:#fff;padding:4px 8px}}
-:root[data-theme="dark"] .brand-logo{background:#fff;padding:4px 8px}
 .nav{display:flex;gap:26px}
 .nav a{font-weight:600;font-size:16px;color:var(--ink);text-decoration:none;padding:4px 0;border-bottom:2px solid transparent}
 .nav a:hover,.nav a.active{border-bottom-color:var(--navy)}
@@ -297,15 +284,6 @@ img,svg{max-width:100%;display:block}
 
   <div class="wrap"><nav class="crumb" aria-label="Хлебные крошки"><a href="https://xn--90adbah8cpy.xn--p1ai/">Главная</a> → <a href="https://xn--90adbah8cpy.xn--p1ai/#sfery-primeneniya">Сферы применения</a> → Укрепление сводов тоннелей</nav></div>
 
-  <section class="section" style="padding-top:28px">
-    <div class="wrap">
-      <div class="tldr">
-        <div class="eyebrow">Коротко</div>
-        <p>Свод и стены выработки удерживают от вывалов породы комбинированной крепью: <strong>анкеры, высокопрочная стальная сетка и набрызг-бетон</strong>. По данным компании «Геобругг», высокопрочная сетка (проволока свыше 1770 Н/мм²) выдерживает большую нагрузку при меньшей массе, проще монтируется на неровном своде и эффективнее работает с набрызг-бетоном, чем тяжёлая сварная сетка. Тип сетки и схему крепи подбирают по категории породы и сечению выработки. Производство в России — ООО «ГЕОБРУГГ».</p>
-      </div>
-    </div>
-  </section>
-
   <section class="section section-sub" id="sistemy">
     <div class="wrap">
       <h2>Системы</h2>
@@ -316,10 +294,20 @@ img,svg{max-width:100%;display:block}
     </div>
   </section>
 
+  <section class="section" style="padding-top:28px">
+    <div class="wrap">
+      <div class="tldr">
+        <div class="eyebrow">Коротко</div>
+        <p>Свод и стены выработки удерживают от вывалов породы комбинированной крепью: <strong>анкеры, высокопрочная стальная сетка и набрызг-бетон</strong>. По данным компании «Геобругг», высокопрочная сетка (проволока свыше 1770 Н/мм²) выдерживает большую нагрузку при меньшей массе, проще монтируется на неровном своде и эффективнее работает с набрызг-бетоном, чем тяжёлая сварная сетка. Тип сетки и схему крепи подбирают по категории породы и сечению выработки. Производство в России — ООО «ГЕОБРУГГ».</p>
+      </div>
+    </div>
+  </section>
+
   <section class="section" id="tipy-krepi">
     <div class="wrap article">
       <div style="color:var(--navy);font-weight:700;font-size:15px;margin-bottom:8px">Простыми словами об инженерной защите:</div>
-      <h2>Основные типы поверхностной крепи</h2>
+      <details class="art-acc">
+      <summary>Основные типы поверхностной крепи</summary>
       <p class="muted" style="font-style:italic;margin-top:10px">Выжимки из статьи «Варианты поверхностной крепи в условиях деформации горного массива»</p>
       <p class="muted" style="font-style:italic;margin-top:10px">Перевод: An Overview of Surface Rock Support for Deformable Ground Conditions V. Louchnikov, M. P. Sandy, O. Watson, M. Orunesu and V. Eremenko</p>
       <p style="margin-top:16px">Представленные выжимки из статьи охватывают обзор типов поверхностной крепи с точки зрения основных преимуществ и недостатков применяемых конструкций</p>
@@ -355,6 +343,7 @@ img,svg{max-width:100%;display:block}
       <h4>Сеть из подхватов (штрипсов)</h4>
       <p>«Штрипсовая сеть» состоит из стандартной сварной сети 5,6 мм с добавлением двух прутов того же диаметра вдоль края листа. Это способствует более жесткому перекрытию и снижает риск разрушения сети в этих местах.</p>
       <p>Выше был представлен обзор имеющихся типов поверхностной крепи. Сравнение между их способностью воспринимать деформацию и стоимостью каждого из них, в том числе выраженной в стоимости на килоджоуль способности энергопоглощения, представлено в полной версии статьи.</p>
+      </details>
     </div>
   </section>
 

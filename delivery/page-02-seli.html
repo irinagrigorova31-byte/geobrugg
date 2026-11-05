@@ -112,22 +112,6 @@
   --text:"PT Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
   --gutter:16px; --maxw:1120px;
 }
-@media (prefers-color-scheme: dark){
-  :root:not([data-theme="light"]){
-    --surface:#14161d; --surface-sub:#1e212b; --surface-navy:#2b3a8c; --surface-navy-deep:#12142e;
-    --ink:#f2f4f8; --ink-muted:#abb0bd; --on-navy:#ffffff; --on-navy-muted:#c8cde3;
-    --red:#ec4a4a; --navy:#3f51bf; --link:#93a3ea; --border:#2b2f3b; --field-border:#6e7484; --focus:#93a3ea;
-    --shadow-card:0 1px 3px rgba(0,0,0,.55), 0 8px 20px rgba(0,0,0,.45);
-    --shadow-float:0 10px 28px rgba(0,0,0,.65);
-  }
-}
-:root[data-theme="dark"]{
-  --surface:#14161d; --surface-sub:#1e212b; --surface-navy:#2b3a8c; --surface-navy-deep:#12142e;
-  --ink:#f2f4f8; --ink-muted:#abb0bd; --on-navy:#ffffff; --on-navy-muted:#c8cde3;
-  --red:#ec4a4a; --navy:#3f51bf; --link:#93a3ea; --border:#2b2f3b; --field-border:#6e7484; --focus:#93a3ea;
-  --shadow-card:0 1px 3px rgba(0,0,0,.55), 0 8px 20px rgba(0,0,0,.45);
-  --shadow-float:0 10px 28px rgba(0,0,0,.65);
-}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{margin:0;background:var(--surface);color:var(--ink);font-family:var(--text);font-size:16px;line-height:26px;-webkit-font-smoothing:antialiased}
@@ -150,6 +134,11 @@ img,svg{max-width:100%;display:block}
 .article ul{margin:0 0 16px;padding-left:22px}
 .article li{margin-bottom:8px}
 .article .author{color:var(--ink-muted);font-style:italic;margin-top:20px}
+.article .art-acc{border-top:1px solid var(--border);border-bottom:1px solid var(--border);margin-top:8px}
+.article .art-acc>summary{cursor:pointer;list-style:none;font-family:var(--display);font-weight:800;font-size:26px;line-height:32px;color:var(--ink);padding:18px 44px 18px 0;position:relative}
+.article .art-acc>summary::-webkit-details-marker{display:none}
+.article .art-acc>summary::after{content:"+";position:absolute;right:6px;top:14px;font-size:30px;color:var(--navy);font-weight:700}
+.article .art-acc[open]>summary::after{content:"–"}
 
 /* header */
 .site-header{position:sticky;top:0;z-index:40;background:var(--surface);border-bottom:1px solid var(--border)}
@@ -157,8 +146,6 @@ img,svg{max-width:100%;display:block}
 .brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink)}
 .brand-name{font-family:var(--display);font-weight:800;font-size:22px;letter-spacing:.02em}
 .brand-logo{height:30px;width:auto;display:block;border-radius:4px}
-@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .brand-logo{background:#fff;padding:4px 8px}}
-:root[data-theme="dark"] .brand-logo{background:#fff;padding:4px 8px}
 .nav{display:flex;gap:26px}
 .nav a{font-weight:600;font-size:16px;color:var(--ink);text-decoration:none;padding:4px 0;border-bottom:2px solid transparent}
 .nav a:hover,.nav a.active{border-bottom-color:var(--navy)}
@@ -307,15 +294,6 @@ img,svg{max-width:100%;display:block}
 
   <div class="wrap"><nav class="crumb" aria-label="Хлебные крошки"><a href="https://xn--90adbah8cpy.xn--p1ai/">Главная</a> → <a href="https://xn--90adbah8cpy.xn--p1ai/#sfery-primeneniya">Сферы применения</a> → Защита от селей</nav></div>
 
-  <section class="section" style="padding-top:28px">
-    <div class="wrap">
-      <div class="tldr">
-        <div class="eyebrow">Коротко</div>
-        <p>Сель — стремительный грязекаменный поток в горном русле. Защиту обеспечивает сочетание мер: <strong>селеудерживающие барьеры, селепропускные сооружения, направляющие дамбы и стабилизация водосбора</strong>. По данным компании «Геобругг», гибкие селеудерживающие барьеры — кольцевые сетки из высокопрочной стали на опорах и канатах: они перехватывают поток, удерживают наносы и пропускают воду, монтируются быстрее бетонных плотин и ставятся каскадом по руслу. Барьер подбирают по расчёту расхода и объёма выноса. Производство в России — ООО «ГЕОБРУГГ».</p>
-      </div>
-    </div>
-  </section>
-
   <section class="section section-sub" id="sistemy">
     <div class="wrap">
       <h2>Системы</h2>
@@ -326,10 +304,20 @@ img,svg{max-width:100%;display:block}
     </div>
   </section>
 
+  <section class="section" style="padding-top:28px">
+    <div class="wrap">
+      <div class="tldr">
+        <div class="eyebrow">Коротко</div>
+        <p>Сель — стремительный грязекаменный поток в горном русле. Защиту обеспечивает сочетание мер: <strong>селеудерживающие барьеры, селепропускные сооружения, направляющие дамбы и стабилизация водосбора</strong>. По данным компании «Геобругг», гибкие селеудерживающие барьеры — кольцевые сетки из высокопрочной стали на опорах и канатах: они перехватывают поток, удерживают наносы и пропускают воду, монтируются быстрее бетонных плотин и ставятся каскадом по руслу. Барьер подбирают по расчёту расхода и объёма выноса. Производство в России — ООО «ГЕОБРУГГ».</p>
+      </div>
+    </div>
+  </section>
+
   <section class="section" id="rukovodstvo">
     <div class="wrap article">
       <div style="color:var(--navy);font-weight:700;font-size:15px;margin-bottom:8px">Простыми словами об инженерной защите:</div>
-      <h2>Практическое руководство по инженерной защите от селевых потоков, микроселей, неглубоких оползней и оползней-оплывин на склонах</h2>
+      <details class="art-acc">
+      <summary>Практическое руководство по инженерной защите от селевых потоков, микроселей, неглубоких оползней и оползней-оплывин на склонах</summary>
       <p style="margin-top:16px">В 2021 году швейцарское федеральное агентство по окружающей среде (BAFU) опубликовало “Практическое руководство по применению сетчатых конструкций для защиты от селевых потоков и оползней-оплывин или микроселей без русла на склонах”. В статье приводится краткий обзор документа на русском языке и ссылка на скачивание.</p>
       <p>Селевые потоки и оползни подвергают опасности население и инфраструктуру в горной местности и прилегающих районах. В рамках комплексного управления рисками от этих стихийных бедствий, в дополнение к учету природных опасностей, при территориальном планировании возможно использование структурных, организационных или естественных мер защиты населения от селей. Сложности, связанные с необходимостью эвакуации населения, короткое время предупреждения о селевых потоках и оползнях-оплывинах, а также их мощь и соответствующая разрушительная сила являются важной причиной, по которой инженерные мероприятия выполняют важную функцию для защиты при оползнях и селях.</p>
       <p>Сетчатые барьеры для защиты от селей в горах и оползней-оплывин на склонах холмов доступны на рынке уже несколько лет и дополняют спектр возможных мероприятий по инженерной защите. Характерной особенностью этого типа конструкций является проницаемость сеток, которые задерживают более крупные твердые частицы, но позволяют воде и взвешенным твердым веществам проходить через них и, таким образом, дренировать селевую или оползневую массу. Помимо удержания водокаменных и грязекаменных масс, существуют и другие возможности применения сетчатых барьеров, например для стабилизации русла реки или для изменения направления движения опасного процесса.</p>
@@ -341,6 +329,7 @@ img,svg{max-width:100%;display:block}
       <p>Как и в случае со всеми сооружениями для инженерной защиты, для их долгосрочного использования необходимы осмотр и техническое обслуживание. Поэтому документ охватывает решающие аспекты, касающиеся обслуживания и ремонта гибких защитных барьеров. Специальные конструкции дополняют диапазон применения сетчатых барьеров, и в документе представлены и проиллюстрированы избранные примеры. Пошаговая схема процедур проектирования противоселевых барьеров и барьеров от микроселей / неглубоких оползней помогает проектировщикам в определении конкретных параметров конструкций и обобщает техническую часть практического руководства.</p>
       <p>Полный текст документа можно загрузить по ссылке с сайта швейцарского федерального агентства по окружающей среде (BAFU): WSL Berichte Practical guide for debris flow and hillslope …Bundesamt für Umwelt BAFU https://www.bafu.admin.ch › bafu › naturgefahren</p>
       <p class="author">Автор: Александр Баринов</p>
+      </details>
     </div>
   </section>
 

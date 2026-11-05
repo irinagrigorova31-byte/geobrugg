@@ -103,22 +103,6 @@
   --text:"PT Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
   --gutter:16px; --maxw:1120px;
 }
-@media (prefers-color-scheme: dark){
-  :root:not([data-theme="light"]){
-    --surface:#14161d; --surface-sub:#1e212b; --surface-navy:#2b3a8c; --surface-navy-deep:#12142e;
-    --ink:#f2f4f8; --ink-muted:#abb0bd; --on-navy:#ffffff; --on-navy-muted:#c8cde3;
-    --red:#ec4a4a; --navy:#3f51bf; --link:#93a3ea; --border:#2b2f3b; --field-border:#6e7484; --focus:#93a3ea;
-    --shadow-card:0 1px 3px rgba(0,0,0,.55), 0 8px 20px rgba(0,0,0,.45);
-    --shadow-float:0 10px 28px rgba(0,0,0,.65);
-  }
-}
-:root[data-theme="dark"]{
-  --surface:#14161d; --surface-sub:#1e212b; --surface-navy:#2b3a8c; --surface-navy-deep:#12142e;
-  --ink:#f2f4f8; --ink-muted:#abb0bd; --on-navy:#ffffff; --on-navy-muted:#c8cde3;
-  --red:#ec4a4a; --navy:#3f51bf; --link:#93a3ea; --border:#2b2f3b; --field-border:#6e7484; --focus:#93a3ea;
-  --shadow-card:0 1px 3px rgba(0,0,0,.55), 0 8px 20px rgba(0,0,0,.45);
-  --shadow-float:0 10px 28px rgba(0,0,0,.65);
-}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{margin:0;background:var(--surface);color:var(--ink);font-family:var(--text);font-size:16px;line-height:26px;-webkit-font-smoothing:antialiased}
@@ -141,6 +125,11 @@ img,svg{max-width:100%;display:block}
 .article ul{margin:0 0 16px;padding-left:22px}
 .article li{margin-bottom:8px}
 .article .author{color:var(--ink-muted);font-style:italic;margin-top:20px}
+.article .art-acc{border-top:1px solid var(--border);border-bottom:1px solid var(--border);margin-top:8px}
+.article .art-acc>summary{cursor:pointer;list-style:none;font-family:var(--display);font-weight:800;font-size:26px;line-height:32px;color:var(--ink);padding:18px 44px 18px 0;position:relative}
+.article .art-acc>summary::-webkit-details-marker{display:none}
+.article .art-acc>summary::after{content:"+";position:absolute;right:6px;top:14px;font-size:30px;color:var(--navy);font-weight:700}
+.article .art-acc[open]>summary::after{content:"–"}
 
 /* header */
 .site-header{position:sticky;top:0;z-index:40;background:var(--surface);border-bottom:1px solid var(--border)}
@@ -148,8 +137,6 @@ img,svg{max-width:100%;display:block}
 .brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink)}
 .brand-name{font-family:var(--display);font-weight:800;font-size:22px;letter-spacing:.02em}
 .brand-logo{height:30px;width:auto;display:block;border-radius:4px}
-@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .brand-logo{background:#fff;padding:4px 8px}}
-:root[data-theme="dark"] .brand-logo{background:#fff;padding:4px 8px}
 .nav{display:flex;gap:26px}
 .nav a{font-weight:600;font-size:16px;color:var(--ink);text-decoration:none;padding:4px 0;border-bottom:2px solid transparent}
 .nav a:hover,.nav a.active{border-bottom-color:var(--navy)}
@@ -298,15 +285,6 @@ img,svg{max-width:100%;display:block}
 
   <div class="wrap"><nav class="crumb" aria-label="Хлебные крошки"><a href="https://xn--90adbah8cpy.xn--p1ai/">Главная</a> → <a href="https://xn--90adbah8cpy.xn--p1ai/#sfery-primeneniya">Сферы применения</a> → Защита от снежных лавин</nav></div>
 
-  <section class="section" style="padding-top:28px">
-    <div class="wrap">
-      <div class="tldr">
-        <div class="eyebrow">Коротко</div>
-        <p>Лавина — сход массы снега по склону, опасный для дорог, посёлков и курортов. Надёжнее всего удержать снег в зоне зарождения. По данным компании «Геобругг», <strong>снегоудерживающие сетки и барьеры из высокопрочной стали</strong> удерживают снежный покров в самом очаге и не дают лавине сойти; там, где это невозможно, массу отклоняют, тормозят или пропускают галереями. Систему подбирают под лавиносбор по расчёту снегонакопления и давления снега. Производство в России — ООО «ГЕОБРУГГ».</p>
-      </div>
-    </div>
-  </section>
-
   <section class="section section-sub" id="sistemy">
     <div class="wrap">
       <h2>Системы</h2>
@@ -317,10 +295,20 @@ img,svg{max-width:100%;display:block}
     </div>
   </section>
 
+  <section class="section" style="padding-top:28px">
+    <div class="wrap">
+      <div class="tldr">
+        <div class="eyebrow">Коротко</div>
+        <p>Лавина — сход массы снега по склону, опасный для дорог, посёлков и курортов. Надёжнее всего удержать снег в зоне зарождения. По данным компании «Геобругг», <strong>снегоудерживающие сетки и барьеры из высокопрочной стали</strong> удерживают снежный покров в самом очаге и не дают лавине сойти; там, где это невозможно, массу отклоняют, тормозят или пропускают галереями. Систему подбирают под лавиносбор по расчёту снегонакопления и давления снега. Производство в России — ООО «ГЕОБРУГГ».</p>
+      </div>
+    </div>
+  </section>
+
   <section class="section" id="kak-borotsya">
     <div class="wrap article">
       <div style="color:var(--navy);font-weight:700;font-size:15px;margin-bottom:8px">Простыми словами об инженерной защите:</div>
-      <h2>Как борются со снежными лавинами</h2>
+      <details class="art-acc">
+      <summary>Как борются со снежными лавинами</summary>
       <p style="margin-top:16px">Лавины, как и другие опасные природные явления, часто считают неизбежным злом, с которым надо смириться. Спасатели раз за разом расчищают автомобильные и железные дороги или достают из снежных завалов людей, отчеты пестрят количеством задействованной техники и персонала, а информационные щиты и комментарии в соцсетях призывают граждан быть ответственнее и предупреждают о лавинной опасности. Труд спасателей нелегок, везде не успеть, и часто вариант один — закрыть лавиноопасный участок. Перекрытые месяцами автомобильные дороги, горнолыжные курорты, горные маршруты никому ничего хорошего не приносят. Но «что делать, это же природа!» — самое частое суждение. Давайте разберемся.</p>
       <p>На первый взгляд неочевидно, но самой действенной мерой является… инженерная защита – т.е. сооружение лавинозащитных конструкций. Земляные и бетонные дамбы, галереи и лавинорезы обеспечат надежную защиту на века. Они отклоняют, останавливают, либо безопасно пропускают лавину над защищаемым объектом. Но, есть и минусы — строительство массивных конструкций — это долго и дорого, к тому же они существенно нарушают природный ландшафт местности. Это самые распространенные сооружения в мире, встретить их можно буквально во всех лавиноопасных регионах.</p>
       <p>Альтернативой традиционным бетонным сооружениям являются стальные или сетчатые снегоудерживающие барьеры — это инженерные конструкции, которые устанавливаются в верхней части склона и удерживают снег от сползания вниз. Такого рода защита от снежных лавин представлена в том числе снегоудерживающими барьерами Geobrugg из высокопрочной стальной проволоки, способными выдерживать высокие статические и динамические нагрузки. Что также важно — снегоудерживающие барьеры не нарушают природный ландшафт и существенно дешевле строительства массивных бетонных и земляных снегозадерживающих сооружений.</p>
@@ -328,6 +316,7 @@ img,svg{max-width:100%;display:block}
       <p>Другим, чуть лучше просчитываемым, но гораздо шире применяемым является полный спектр так называемых “методов активного воздействия” на лавины. В этом случае на снежный покров в очаге формирования лавины, собственно, активно воздействуют для приведения его в движение и схода снежной лавины в нужное время. Воздействие — чаще всего вибрации или подрезка — осуществляется взрывом, струей сжатого воздуха или газа, а также механически — леской, лопатой, лыжами и даже (в экзотических случаях) экскаватором. Снежная лавина сходит в нужное время и, хотелось бы сказать, в нужное место, но, к сожалению, это не всегда так. По идее, спуская лавину запланированно, мы можем сделать это безопасно для окружающих – снежная лавина либо спускается к подножию склона, либо на дорогу, трассу горнолыжного курорта или даже на дамбу, где скопившийся снег расчищают, пока никого нет (пока трасса или дорога перекрыта для движения). Проблемы начинаются, если что-то идет не по плану — не спустили вовремя и накопилось много снега, не разорвался снаряд, взрыв был, а лавина не сошла и т.п. Это чревато тем, что спущенная в следующую попытку снежная лавина будет намного больше расчетной и может угрожать считавшимся безопасными участкам. Отдельно стоит упомянуть экологический аспект, связанный с обстрелом. Тем не менее, активное воздействие остается одним из широко распространенных методов в условиях труднодоступных горных районов.</p>
       <p>В целом, мероприятия по инженерной защите (проектирование и строительство инженерных сооружений) или по активному воздействию на снежный покров проводят там, где риски катастрофических последствий от схода лавины высоки — то есть там, где находится много людей или, редкое исключение, важный объект инфраструктуры. Просто в горах, на горных маршрутах, склонах для фрирайда или хелиски защитные мероприятия в лучшем случае предусматривают информирование и предупреждение о лавинной опасности. Поэтому любителям горного отдыха следует позаботься о безопасности самостоятельно — но это уже совсем другая тема.</p>
       <p class="author">Автор: Александр Баринов</p>
+      </details>
     </div>
   </section>
 

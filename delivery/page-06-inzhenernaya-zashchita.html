@@ -100,22 +100,6 @@
   --text:"PT Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
   --gutter:16px; --maxw:1120px;
 }
-@media (prefers-color-scheme: dark){
-  :root:not([data-theme="light"]){
-    --surface:#14161d; --surface-sub:#1e212b; --surface-navy:#2b3a8c; --surface-navy-deep:#12142e;
-    --ink:#f2f4f8; --ink-muted:#abb0bd; --on-navy:#ffffff; --on-navy-muted:#c8cde3;
-    --red:#ec4a4a; --navy:#3f51bf; --link:#93a3ea; --border:#2b2f3b; --field-border:#6e7484; --focus:#93a3ea;
-    --shadow-card:0 1px 3px rgba(0,0,0,.55), 0 8px 20px rgba(0,0,0,.45);
-    --shadow-float:0 10px 28px rgba(0,0,0,.65);
-  }
-}
-:root[data-theme="dark"]{
-  --surface:#14161d; --surface-sub:#1e212b; --surface-navy:#2b3a8c; --surface-navy-deep:#12142e;
-  --ink:#f2f4f8; --ink-muted:#abb0bd; --on-navy:#ffffff; --on-navy-muted:#c8cde3;
-  --red:#ec4a4a; --navy:#3f51bf; --link:#93a3ea; --border:#2b2f3b; --field-border:#6e7484; --focus:#93a3ea;
-  --shadow-card:0 1px 3px rgba(0,0,0,.55), 0 8px 20px rgba(0,0,0,.45);
-  --shadow-float:0 10px 28px rgba(0,0,0,.65);
-}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{margin:0;background:var(--surface);color:var(--ink);font-family:var(--text);font-size:16px;line-height:26px;-webkit-font-smoothing:antialiased}
@@ -138,6 +122,11 @@ img,svg{max-width:100%;display:block}
 .article ul{margin:0 0 16px;padding-left:22px}
 .article li{margin-bottom:8px}
 .article .author{color:var(--ink-muted);font-style:italic;margin-top:20px}
+.article .art-acc{border-top:1px solid var(--border);border-bottom:1px solid var(--border);margin-top:8px}
+.article .art-acc>summary{cursor:pointer;list-style:none;font-family:var(--display);font-weight:800;font-size:26px;line-height:32px;color:var(--ink);padding:18px 44px 18px 0;position:relative}
+.article .art-acc>summary::-webkit-details-marker{display:none}
+.article .art-acc>summary::after{content:"+";position:absolute;right:6px;top:14px;font-size:30px;color:var(--navy);font-weight:700}
+.article .art-acc[open]>summary::after{content:"–"}
 
 /* header */
 .site-header{position:sticky;top:0;z-index:40;background:var(--surface);border-bottom:1px solid var(--border)}
@@ -145,8 +134,6 @@ img,svg{max-width:100%;display:block}
 .brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink)}
 .brand-name{font-family:var(--display);font-weight:800;font-size:22px;letter-spacing:.02em}
 .brand-logo{height:30px;width:auto;display:block;border-radius:4px}
-@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .brand-logo{background:#fff;padding:4px 8px}}
-:root[data-theme="dark"] .brand-logo{background:#fff;padding:4px 8px}
 .nav{display:flex;gap:26px}
 .nav a{font-weight:600;font-size:16px;color:var(--ink);text-decoration:none;padding:4px 0;border-bottom:2px solid transparent}
 .nav a:hover,.nav a.active{border-bottom-color:var(--navy)}
@@ -295,21 +282,21 @@ img,svg{max-width:100%;display:block}
 
   <div class="wrap"><nav class="crumb" aria-label="Хлебные крошки"><a href="https://xn--90adbah8cpy.xn--p1ai/">Главная</a> → <a href="https://xn--90adbah8cpy.xn--p1ai/#sfery-primeneniya">Сферы применения</a> → Инженерная защита территорий</nav></div>
 
-  <section class="section" style="padding-top:28px">
-    <div class="wrap">
-      <div class="tldr">
-        <div class="eyebrow">Коротко</div>
-        <p>Инженерная защита территории — комплекс сооружений и мероприятий против опасных природных процессов: оползней, обвалов, камнепадов, селей, лавин и эрозии (а также затопления). Универсального решения нет — под каждый процесс работает свой тип систем и свой расчёт. По данным компании «Геобругг», гибкие системы из высокопрочной стали (свыше 1770 Н/мм², срок службы до 90 лет) закрывают склоновые и гравитационные процессы; состав защиты подбирают по изысканиям и расчёту. Производство в России — ООО «ГЕОБРУГГ».</p>
-      </div>
-    </div>
-  </section>
-
   <section class="section section-sub" id="sistemy">
     <div class="wrap">
       <h2>Системы</h2>
       <p class="lead muted" style="margin-top:16px;max-width:860px">Шесть направлений защиты от склоновых процессов. На странице направления собраны системы, методы, нормы и реализованные проекты.</p>
       <div class="cards">
         <a class="card" href="https://xn--90adbah8cpy.xn--p1ai/borba-s-opolznyami/"><img class="card-media" src="https://xn--90adbah8cpy.xn--p1ai/wp-content/uploads/2024/12/2017.-sistema-ukrepleniya-sklonov.jpg" alt="Противооползневая защита" loading="lazy"><div class="card-body"><h3>Противооползневая защита</h3><p>Удерживающие сооружения, отвод воды и гибкие стальные системы против смещения грунта.</p></div></a><a class="card" href="https://xn--90adbah8cpy.xn--p1ai/ukreplenie-sklonov/"><img class="card-media" src="https://xn--90adbah8cpy.xn--p1ai/wp-content/uploads/2024/04/8.-tecco%C2%AE-65-3-2018.jpg" alt="Укрепление склонов" loading="lazy"><div class="card-body"><h3>Укрепление склонов</h3><p>Активная стабилизация скальных и грунтовых склонов сеткой TECCO® с анкерами.</p></div></a><a class="card" href="https://xn--90adbah8cpy.xn--p1ai/kamnepad-obval/"><img class="card-media" src="https://xn--90adbah8cpy.xn--p1ai/wp-content/uploads/2024/04/2.-rxe-2022-scaled.jpg" alt="Защита от камнепадов" loading="lazy"><div class="card-body"><h3>Защита от камнепадов</h3><p>Барьеры RXE® до 10 000 кДж, завесы и облицовочные сетки против падающих камней.</p></div></a><a class="card" href="https://xn--90adbah8cpy.xn--p1ai/seli/"><img class="card-media" src="https://xn--90adbah8cpy.xn--p1ai/wp-content/uploads/2024/04/11.-ux180-h6-2013-scaled.jpg" alt="Защита от селей" loading="lazy"><div class="card-body"><h3>Защита от селей</h3><p>Гибкие селеудерживающие барьеры UX®/VX® перехватывают поток и удерживают наносы.</p></div></a><a class="card" href="https://xn--90adbah8cpy.xn--p1ai/laviny/"><img class="card-media" src="https://xn--90adbah8cpy.xn--p1ai/wp-content/uploads/2024/04/9.-spider%C2%AE-avalanche-2018-scaled.jpg" alt="Защита от лавин" loading="lazy"><div class="card-body"><h3>Защита от лавин</h3><p>Снегоудерживающие сетки SPIDER® и барьеры удерживают снег в зоне зарождения.</p></div></a><a class="card" href="https://xn--90adbah8cpy.xn--p1ai/zashchita-ot-erozii/"><img class="card-media" src="https://xn--90adbah8cpy.xn--p1ai/wp-content/uploads/2024/11/risunok-11.-ukreplennaya-nasyp-iz-skalistoj-porody-v-miraflorese-panama.-protivoerozionnye-maty-i-seti-horosho-adaptiruyutsya-k-sklonu-so-slozhnym-relefom-706x450.jpg" alt="Защита от эрозии" loading="lazy"><div class="card-body"><h3>Защита от эрозии</h3><p>Противоэрозионные маты, сетки с анкерами и озеленение закрепляют поверхность склона.</p></div></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:28px">
+    <div class="wrap">
+      <div class="tldr">
+        <div class="eyebrow">Коротко</div>
+        <p>Инженерная защита территории — комплекс сооружений и мероприятий против опасных природных процессов: оползней, обвалов, камнепадов, селей, лавин и эрозии (а также затопления). Универсального решения нет — под каждый процесс работает свой тип систем и свой расчёт. По данным компании «Геобругг», гибкие системы из высокопрочной стали (свыше 1770 Н/мм², срок службы до 90 лет) закрывают склоновые и гравитационные процессы; состав защиты подбирают по изысканиям и расчёту. Производство в России — ООО «ГЕОБРУГГ».</p>
       </div>
     </div>
   </section>
