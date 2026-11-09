@@ -200,13 +200,15 @@ img,svg{max-width:100%;display:block}
 .card-body p{margin:0;color:var(--ink-muted);font-size:15px;line-height:22px}
 
 /* faq */
-.faq{margin-top:24px;border-top:1px solid var(--border);max-width:860px}
-.faq details{border-bottom:1px solid var(--border)}
-.faq summary{cursor:pointer;list-style:none;padding:18px 40px 18px 0;position:relative;font-family:var(--display);font-weight:700;font-size:18px;color:var(--ink)}
+/* FAQ — плитки как на geobrugg.com (Slope Stability), в одну колонку */
+.faq{margin-top:24px;max-width:900px;display:flex;flex-direction:column;gap:14px}
+.faq details{background:var(--surface-navy);border-radius:16px}
+.faq summary{cursor:pointer;list-style:none;padding:20px 54px 20px 24px;position:relative;font-family:var(--display);font-weight:700;font-size:17px;line-height:24px;color:#fff}
 .faq summary::-webkit-details-marker{display:none}
-.faq summary::after{content:"+";position:absolute;right:8px;top:15px;font-size:24px;color:var(--navy);font-weight:700}
+.faq summary::after{content:"+";position:absolute;right:22px;top:20px;font-size:26px;line-height:24px;color:#fff;font-weight:700}
 .faq details[open] summary::after{content:"–"}
-.faq p{margin:0 0 18px;color:var(--ink-muted)}
+.faq details>p{margin:0;padding:2px 24px 22px;color:var(--on-navy-muted);font-size:15px;line-height:23px}
+.faq details>p a{color:#fff;text-decoration:underline}
 
 /* read-more accordion (родной блок «Читать дальше») */
 .readmore{margin-top:8px}
