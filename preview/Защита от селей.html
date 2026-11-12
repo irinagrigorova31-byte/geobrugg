@@ -51,8 +51,7 @@
       "provider": {"@id": "https://xn--90adbah8cpy.xn--p1ai/#org"},
       "areaServed": {"@type": "Country", "name": "Россия"},
       "description": "Гибкие селеудерживающие барьеры из высокопрочной стали, селепропускные и селезадерживающие сооружения и стабилизация водосбора, которые перехватывают селевой поток, удерживают наносы и защищают объекты ниже по течению.",
-      "citation": ["https://docs.cntd.ru/document/1200037378", "https://docs.cntd.ru/document/554818840"],
-      "offers": {"@type": "Offer", "availability": "https://schema.org/InStock", "description": "Стоимость и состав решения — по проектному расчёту под водоток.", "warranty": {"@type": "WarrantyPromise", "durationOfWarranty": {"@type": "QuantitativeValue", "value": 1, "unitCode": "ANN"}}}
+      "citation": ["https://docs.cntd.ru/document/1200037378", "https://docs.cntd.ru/document/554818840"]
     },
     {
       "@type": "Product",
@@ -84,7 +83,9 @@
         {"@type": "Question", "name": "Чем гибкий селеудерживающий барьер лучше бетонной запруды?", "acceptedAnswer": {"@type": "Answer", "text": "Гибкий барьер из высокопрочной стальной сетки перехватывает поток и удерживает наносы, но пропускает воду; его монтируют быстрее и без тяжёлой техники, он дешевле капитальной бетонной плотины и устанавливается каскадом по длине русла."}},
         {"@type": "Question", "name": "Сколько служат селеудерживающие барьеры Геобругг?", "acceptedAnswer": {"@type": "Answer", "text": "Расчётный срок полезной эксплуатации систем «Геобругг» достигает 90 лет и зависит от агрессивности среды — его определяют индивидуально. Стандартная строительная гарантия на выполненные работы — один год."}},
         {"@type": "Question", "name": "Нужны ли изыскания и расчёт перед установкой барьера?", "acceptedAnswer": {"@type": "Answer", "text": "Да. Барьер подбирают по обследованию водосбора и расчёту расхода, объёма выноса и давления потока. Без этого рассчитать конструкцию и её анкеровку нельзя."}},
-        {"@type": "Question", "name": "Что делать при угрозе селя?", "acceptedAnswer": {"@type": "Answer", "text": "При угрозе селя по сигналу МЧС нужно немедленно уйти вверх по склону на безопасную высоту, прочь из русла и лощины. Инженерная защита снижает риск для объектов, но не отменяет систему оповещения и эвакуации."}}
+        {"@type": "Question", "name": "Что делать при угрозе селя?", "acceptedAnswer": {"@type": "Answer", "text": "При угрозе селя по сигналу МЧС нужно немедленно уйти вверх по склону на безопасную высоту, прочь из русла и лощины. Инженерная защита снижает риск для объектов, но не отменяет систему оповещения и эвакуации."}},
+        {"@type": "Question", "name": "В каких руслах работает гибкий барьер и как его закрепляют?", "acceptedAnswer": {"@type": "Answer", "text": "Гибкие селеудерживающие барьеры эффективны в сравнительно узких руслах с чётко выраженными бортами (ориентировочно до нескольких десятков метров по ширине). Несущие канаты закрепляют в коренную породу тросовыми и буроинъекционными анкерами, а после схода селя площадку осматривают и расчищают от накопленного материала. Точные параметры задаёт расчёт по водосбору."}},
+        {"@type": "Question", "name": "Какими нормативными документами регламентируется защита от селей?", "acceptedAnswer": {"@type": "Answer", "text": "Защита от селей проектируется по строительным нормам — СП 116.13330 «Инженерная защита территорий, зданий и сооружений от опасных геологических процессов», а также по СП 115.13330 «Геофизика опасных природных воздействий» и СНиП 22-02-2003."}}
       ]
     },
     {
@@ -111,22 +112,6 @@
   --text:"PT Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
   --gutter:16px; --maxw:1120px;
 }
-@media (prefers-color-scheme: dark){
-  :root:not([data-theme="light"]){
-    --surface:#14161d; --surface-sub:#1e212b; --surface-navy:#2b3a8c; --surface-navy-deep:#12142e;
-    --ink:#f2f4f8; --ink-muted:#abb0bd; --on-navy:#ffffff; --on-navy-muted:#c8cde3;
-    --red:#ec4a4a; --navy:#3f51bf; --link:#93a3ea; --border:#2b2f3b; --field-border:#6e7484; --focus:#93a3ea;
-    --shadow-card:0 1px 3px rgba(0,0,0,.55), 0 8px 20px rgba(0,0,0,.45);
-    --shadow-float:0 10px 28px rgba(0,0,0,.65);
-  }
-}
-:root[data-theme="dark"]{
-  --surface:#14161d; --surface-sub:#1e212b; --surface-navy:#2b3a8c; --surface-navy-deep:#12142e;
-  --ink:#f2f4f8; --ink-muted:#abb0bd; --on-navy:#ffffff; --on-navy-muted:#c8cde3;
-  --red:#ec4a4a; --navy:#3f51bf; --link:#93a3ea; --border:#2b2f3b; --field-border:#6e7484; --focus:#93a3ea;
-  --shadow-card:0 1px 3px rgba(0,0,0,.55), 0 8px 20px rgba(0,0,0,.45);
-  --shadow-float:0 10px 28px rgba(0,0,0,.65);
-}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{margin:0;background:var(--surface);color:var(--ink);font-family:var(--text);font-size:16px;line-height:26px;-webkit-font-smoothing:antialiased}
@@ -149,6 +134,11 @@ img,svg{max-width:100%;display:block}
 .article ul{margin:0 0 16px;padding-left:22px}
 .article li{margin-bottom:8px}
 .article .author{color:var(--ink-muted);font-style:italic;margin-top:20px}
+.article .art-acc{border-top:1px solid var(--border);border-bottom:1px solid var(--border);margin-top:8px}
+.article .art-acc>summary{cursor:pointer;list-style:none;font-family:var(--display);font-weight:800;font-size:26px;line-height:32px;color:var(--ink);padding:18px 44px 18px 0;position:relative}
+.article .art-acc>summary::-webkit-details-marker{display:none}
+.article .art-acc>summary::after{content:"+";position:absolute;right:6px;top:14px;font-size:30px;color:var(--navy);font-weight:700}
+.article .art-acc[open]>summary::after{content:"–"}
 
 /* header */
 .site-header{position:sticky;top:0;z-index:40;background:var(--surface);border-bottom:1px solid var(--border)}
@@ -156,8 +146,6 @@ img,svg{max-width:100%;display:block}
 .brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink)}
 .brand-name{font-family:var(--display);font-weight:800;font-size:22px;letter-spacing:.02em}
 .brand-logo{height:30px;width:auto;display:block;border-radius:4px}
-@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .brand-logo{background:#fff;padding:4px 8px}}
-:root[data-theme="dark"] .brand-logo{background:#fff;padding:4px 8px}
 .nav{display:flex;gap:26px}
 .nav a{font-weight:600;font-size:16px;color:var(--ink);text-decoration:none;padding:4px 0;border-bottom:2px solid transparent}
 .nav a:hover,.nav a.active{border-bottom-color:var(--navy)}
@@ -213,13 +201,15 @@ img,svg{max-width:100%;display:block}
 .card-body p{margin:0;color:var(--ink-muted);font-size:15px;line-height:22px}
 
 /* faq */
-.faq{margin-top:24px;border-top:1px solid var(--border);max-width:860px}
-.faq details{border-bottom:1px solid var(--border)}
-.faq summary{cursor:pointer;list-style:none;padding:18px 40px 18px 0;position:relative;font-family:var(--display);font-weight:700;font-size:18px;color:var(--ink)}
+/* FAQ — плитки как на geobrugg.com (Slope Stability), в одну колонку */
+.faq{margin-top:24px;max-width:900px;display:flex;flex-direction:column;gap:14px}
+.faq details{background:var(--surface-navy);border-radius:16px}
+.faq summary{cursor:pointer;list-style:none;padding:20px 54px 20px 24px;position:relative;font-family:var(--display);font-weight:700;font-size:17px;line-height:24px;color:#fff}
 .faq summary::-webkit-details-marker{display:none}
-.faq summary::after{content:"+";position:absolute;right:8px;top:15px;font-size:24px;color:var(--navy);font-weight:700}
+.faq summary::after{content:"+";position:absolute;right:22px;top:20px;font-size:26px;line-height:24px;color:#fff;font-weight:700}
 .faq details[open] summary::after{content:"–"}
-.faq p{margin:0 0 18px;color:var(--ink-muted)}
+.faq details>p{margin:0;padding:2px 24px 22px;color:var(--on-navy-muted);font-size:15px;line-height:23px}
+.faq details>p a{color:#fff;text-decoration:underline}
 
 /* read-more accordion (родной блок «Читать дальше») */
 .readmore{margin-top:8px}
@@ -306,15 +296,6 @@ img,svg{max-width:100%;display:block}
 
   <div class="wrap"><nav class="crumb" aria-label="Хлебные крошки"><a href="https://xn--90adbah8cpy.xn--p1ai/">Главная</a> → <a href="https://xn--90adbah8cpy.xn--p1ai/#sfery-primeneniya">Сферы применения</a> → Защита от селей</nav></div>
 
-  <section class="section" style="padding-top:28px">
-    <div class="wrap">
-      <div class="tldr">
-        <div class="eyebrow">Коротко</div>
-        <p>Сель — стремительный грязекаменный поток в горном русле. Защиту обеспечивает сочетание мер: <strong>селеудерживающие барьеры, селепропускные сооружения, направляющие дамбы и стабилизация водосбора</strong>. По данным компании «Геобругг», гибкие селеудерживающие барьеры — кольцевые сетки из высокопрочной стали на опорах и канатах: они перехватывают поток, удерживают наносы и пропускают воду, монтируются быстрее бетонных плотин и ставятся каскадом по руслу. Барьер подбирают по расчёту расхода и объёма выноса. Производство в России — ООО «ГЕОБРУГГ».</p>
-      </div>
-    </div>
-  </section>
-
   <section class="section section-sub" id="sistemy">
     <div class="wrap">
       <h2>Системы</h2>
@@ -325,42 +306,36 @@ img,svg{max-width:100%;display:block}
     </div>
   </section>
 
-  <!-- ============================================================
-       РОДНОЙ ЭКСПЕРТНЫЙ ТЕКСТ РАЗДЕЛА вставляется ЗДЕСЬ
-       (как родная статья «Как укрепить склон?» на странице «Укрепление склонов»).
-       Разметка блока: <section class="section"><div class="wrap article">…текст с h2/h4/p…</div></section>
-       Текст не сочиняем — берём из материалов клиента по данному разделу.
-       ============================================================ -->
-
-  <section class="section" id="normativ" style="padding-top:0">
-    <div class="wrap article">
-      <p class="muted" style="font-size:15px;margin:0"><strong>Нормативная база.</strong> Защита от селей проектируется по строительным нормам — <a href="https://docs.cntd.ru/document/1200037378" rel="noopener" target="_blank">СП 116.13330</a> «Инженерная защита территорий, зданий и сооружений от опасных геологических процессов», а также по СП 115.13330 «Геофизика опасных природных воздействий» и СНиП 22-02-2003. Реквизиты и статус ООО «ГЕОБРУГГ» подтверждены данными ЕГРЮЛ (ФНС): ОГРН 1167746305209.</p>
-    </div>
-  </section>
-
-  <section class="section section-sub" id="proekty">
+  <section class="section" style="padding-top:28px">
     <div class="wrap">
-      <h2>Реализованные проекты</h2>
-      <p class="muted" style="margin-top:12px;max-width:860px">Объекты инженерной защиты, реализованные ООО «ГЕОБРУГГ» на территории России.</p>
-      <div class="cards cards-cases">
-        <div class="card"><img class="card-media" src="https://xn--90adbah8cpy.xn--p1ai/wp-content/uploads/2024/04/11.-ux180-h6-2013-scaled.jpg" alt="Система инженерной защиты — Селеудерживающий барьер, 2013" loading="lazy"><div class="card-body"><span class="card-eyebrow">Система инженерной защиты</span><h3>Селеудерживающий барьер</h3><p>Год установки: 2013</p></div></div>
-        <div class="card"><img class="card-media" src="https://xn--90adbah8cpy.xn--p1ai/wp-content/uploads/2024/04/12.-ux180-h6-2012-scaled.jpg" alt="Система инженерной защиты — Селеудерживающий барьер, 2012" loading="lazy"><div class="card-body"><span class="card-eyebrow">Система инженерной защиты</span><h3>Селеудерживающий барьер</h3><p>Год установки: 2012</p></div></div>
-        <div class="card"><img class="card-media" src="https://xn--90adbah8cpy.xn--p1ai/wp-content/uploads/2024/12/2017.-sistema-ukrepleniya-sklonov.jpg" alt="Система инженерной защиты — Система укрепления склонов, 2017" loading="lazy"><div class="card-body"><span class="card-eyebrow">Система инженерной защиты</span><h3>Система укрепления склонов</h3><p>Год установки: 2017</p></div></div>
-        <div class="card"><img class="card-media" src="https://xn--90adbah8cpy.xn--p1ai/wp-content/uploads/2024/04/1.-minax%C2%AE-g65-3-2023.jpg" alt="Система инженерной защиты — Противокамнепадная завеса, 2023" loading="lazy"><div class="card-body"><span class="card-eyebrow">Система инженерной защиты</span><h3>Противокамнепадная завеса</h3><p>Год установки: 2023</p></div></div>
-        <div class="card"><img class="card-media" src="https://xn--90adbah8cpy.xn--p1ai/wp-content/uploads/2024/04/2.-rxe-2022-scaled.jpg" alt="Система инженерной защиты — Противокамнепадный барьер до 10 000 кДж, 2022" loading="lazy"><div class="card-body"><span class="card-eyebrow">Система инженерной защиты</span><h3>Противокамнепадный барьер до 10 000 кДж</h3><p>Год установки: 2022</p></div></div>
-        <div class="card"><img class="card-media" src="https://xn--90adbah8cpy.xn--p1ai/wp-content/uploads/2024/04/3.-fia-debris-fence-2021-1-scaled.jpg" alt="Система инженерной защиты — Motorsport FIA защитные ограждения, 2021" loading="lazy"><div class="card-body"><span class="card-eyebrow">Система инженерной защиты</span><h3>Motorsport FIA защитные ограждения</h3><p>Год установки: 2021</p></div></div>
-        <div class="card"><img class="card-media" src="https://xn--90adbah8cpy.xn--p1ai/wp-content/uploads/2024/04/4.-quarox%C2%AE-plus-2021-scaled.jpg" alt="Система инженерной защиты — Противокамнепадная завеса, 2021" loading="lazy"><div class="card-body"><span class="card-eyebrow">Система инженерной защиты</span><h3>Противокамнепадная завеса</h3><p>Год установки: 2021</p></div></div>
-        <div class="card"><img class="card-media" src="https://xn--90adbah8cpy.xn--p1ai/wp-content/uploads/2024/04/5.-tecco%C2%AE-drape-g65-3-2020-scaled.jpg" alt="Система инженерной защиты — Противокамнепадная завеса, 2020" loading="lazy"><div class="card-body"><span class="card-eyebrow">Система инженерной защиты</span><h3>Противокамнепадная завеса</h3><p>Год установки: 2020</p></div></div>
-        <div class="card"><img class="card-media" src="https://xn--90adbah8cpy.xn--p1ai/wp-content/uploads/2024/04/6.-quarox%C2%AE-2019-scaled.jpg" alt="Система инженерной защиты — Противокамнепадная завеса, 2019" loading="lazy"><div class="card-body"><span class="card-eyebrow">Система инженерной защиты</span><h3>Противокамнепадная завеса</h3><p>Год установки: 2019</p></div></div>
-        <div class="card"><img class="card-media" src="https://xn--90adbah8cpy.xn--p1ai/wp-content/uploads/2024/04/7.-minax%C2%AE-80-3-2018-scaled.jpg" alt="Система инженерной защиты — Укрепление сводов: сеть 80/3, 2018" loading="lazy"><div class="card-body"><span class="card-eyebrow">Система инженерной защиты</span><h3>Укрепление сводов: сеть 80/3</h3><p>Год установки: 2018</p></div></div>
-        <div class="card"><img class="card-media" src="https://xn--90adbah8cpy.xn--p1ai/wp-content/uploads/2024/04/8.-tecco%C2%AE-65-3-2018.jpg" alt="Система инженерной защиты — Система укрепления склонов, 2018" loading="lazy"><div class="card-body"><span class="card-eyebrow">Система инженерной защиты</span><h3>Система укрепления склонов</h3><p>Год установки: 2018</p></div></div>
-        <div class="card"><img class="card-media" src="https://xn--90adbah8cpy.xn--p1ai/wp-content/uploads/2024/04/9.-spider%C2%AE-avalanche-2018-scaled.jpg" alt="Система инженерной защиты — Снегоудерживающий барьер, 2018" loading="lazy"><div class="card-body"><span class="card-eyebrow">Система инженерной защиты</span><h3>Снегоудерживающий барьер</h3><p>Год установки: 2018</p></div></div>
-        <div class="card"><img class="card-media" src="https://xn--90adbah8cpy.xn--p1ai/wp-content/uploads/2024/12/2017.snegouderzhivayushhij-barer.webp" alt="Система инженерной защиты — Снегоудерживающий барьер, 2017" loading="lazy"><div class="card-body"><span class="card-eyebrow">Система инженерной защиты</span><h3>Снегоудерживающий барьер</h3><p>Год установки: 2017</p></div></div>
-        <div class="card"><img class="card-media" src="https://xn--90adbah8cpy.xn--p1ai/wp-content/uploads/2024/04/10.-fia-debris-fence-2014-scaled.jpg" alt="Система инженерной защиты — Motorsport FIA защитные ограждения, 2014" loading="lazy"><div class="card-body"><span class="card-eyebrow">Система инженерной защиты</span><h3>Motorsport FIA защитные ограждения</h3><p>Год установки: 2014</p></div></div>
-        <div class="card"><img class="card-media" src="https://xn--90adbah8cpy.xn--p1ai/wp-content/uploads/2024/04/13.-tecco%C2%AE-g65-3-2011.jpg" alt="Система инженерной защиты — Система укрепления склонов, 2011" loading="lazy"><div class="card-body"><span class="card-eyebrow">Система инженерной защиты</span><h3>Система укрепления склонов</h3><p>Год установки: 2011</p></div></div>
+      <div class="tldr">
+        <div class="eyebrow">Коротко</div>
+        <p>Сель — стремительный грязекаменный поток в горном русле. Защиту обеспечивает сочетание мер: <strong>селеудерживающие барьеры, селепропускные сооружения, направляющие дамбы и стабилизация водосбора</strong>. По данным компании «Геобругг», гибкие селеудерживающие барьеры — кольцевые сетки из высокопрочной стали на опорах и канатах: они перехватывают поток, удерживают наносы и пропускают воду, монтируются быстрее бетонных плотин и ставятся каскадом по руслу. Барьер подбирают по расчёту расхода и объёма выноса. Производство в России — ООО «ГЕОБРУГГ».</p>
       </div>
     </div>
   </section>
+
+  <section class="section" id="rukovodstvo">
+    <div class="wrap article">
+      <div style="color:var(--navy);font-weight:700;font-size:15px;margin-bottom:8px">Простыми словами об инженерной защите:</div>
+      <details class="art-acc">
+      <summary>Практическое руководство по инженерной защите от селевых потоков, микроселей, неглубоких оползней и оползней-оплывин на склонах</summary>
+      <p style="margin-top:16px">В 2021 году швейцарское федеральное агентство по окружающей среде (BAFU) опубликовало “Практическое руководство по применению сетчатых конструкций для защиты от селевых потоков и оползней-оплывин или микроселей без русла на склонах”. В статье приводится краткий обзор документа на русском языке и ссылка на скачивание.</p>
+      <p>Селевые потоки и оползни подвергают опасности население и инфраструктуру в горной местности и прилегающих районах. В рамках комплексного управления рисками от этих стихийных бедствий, в дополнение к учету природных опасностей, при территориальном планировании возможно использование структурных, организационных или естественных мер защиты населения от селей. Сложности, связанные с необходимостью эвакуации населения, короткое время предупреждения о селевых потоках и оползнях-оплывинах, а также их мощь и соответствующая разрушительная сила являются важной причиной, по которой инженерные мероприятия выполняют важную функцию для защиты при оползнях и селях.</p>
+      <p>Сетчатые барьеры для защиты от селей в горах и оползней-оплывин на склонах холмов доступны на рынке уже несколько лет и дополняют спектр возможных мероприятий по инженерной защите. Характерной особенностью этого типа конструкций является проницаемость сеток, которые задерживают более крупные твердые частицы, но позволяют воде и взвешенным твердым веществам проходить через них и, таким образом, дренировать селевую или оползневую массу. Помимо удержания водокаменных и грязекаменных масс, существуют и другие возможности применения сетчатых барьеров, например для стабилизации русла реки или для изменения направления движения опасного процесса.</p>
+      <p>При проектировании защитных мероприятий важно, чтобы преимущества и недостатки различных типов селезащитных сооружений были представлены прозрачно и оценивались с учетом специфики объекта. Противоселевые барьеры и барьеры для защиты от неглубоких оползней на склонах являются относительно новыми видами конструкций. По этой причине обширный и долгосрочный опыт проведения мероприятий, а также необходимые ноу-хау в проектировании, строительстве, эксплуатации и техническом обслуживании пока еще не столь широко доступны экспертной аудитории. С помощью представленного практического руководства авторы хотят закрыть этот пробел в знаниях и продемонстрировать проектировщикам, строителям и заказчикам уже накопленный опыт. Девиз практического руководства: от практиков – для практиков!</p>
+      <p>Практическое руководство разделено на общую и техническую часть. Оно нацелено как на широкую, так и на технически ориентированную аудиторию и предоставляет обзор современного состояния конкретных систем защиты в Швейцарии. Основное внимание уделяется гравитационным природным опасным процессам, связанным с селями и селеподобными оползаниями на склонах, а также стандартным системам с маркировкой CE для сетчатых противоселевых барьеров.</p>
+      <p>В общей части описываются важные рамочные условия, такие как процедуры утверждения и ответственность, а также объясняется, как правильно проектировать и строить противоселевые сооружения барьерного типа. Основное внимание в этой части уделяется аспектам несущей способности, эксплуатационной пригодности, долговечности, случаям перегрузок и местным условиям.</p>
+      <p>Далее авторы освещают возможные виды повреждений и их причины, а также способы предотвращения повреждений. Схема поддержки принятия решений обобщает наиболее важные аспекты общей части, обсуждает преимущества и недостатки и отвечает на часто задаваемые вопросы.</p>
+      <p>В технической части описывается построение сценариев процессов схода селевых потоков и движения оползней-оплывин, за которыми следуют пояснения по конкретным деталям противоселевых барьеров и барьеров от неглубоких оползней. Предоставляется более подробная информация о конструкции сетчатых барьеров, например, касательно остаточной высоты после заполнения породой или базального отверстия селевых сеток. Приводятся указания по выбору размеров и типов сетчатых противоселевых и противооползневых барьеров, основанные на концепции безопасности и моделях нагрузки, а также подробно объяснена конструкция отдельных компонентов.</p>
+      <p>Как и в случае со всеми сооружениями для инженерной защиты, для их долгосрочного использования необходимы осмотр и техническое обслуживание. Поэтому документ охватывает решающие аспекты, касающиеся обслуживания и ремонта гибких защитных барьеров. Специальные конструкции дополняют диапазон применения сетчатых барьеров, и в документе представлены и проиллюстрированы избранные примеры. Пошаговая схема процедур проектирования противоселевых барьеров и барьеров от микроселей / неглубоких оползней помогает проектировщикам в определении конкретных параметров конструкций и обобщает техническую часть практического руководства.</p>
+      <p>Полный текст документа можно загрузить по ссылке с сайта швейцарского федерального агентства по окружающей среде (BAFU): WSL Berichte Practical guide for debris flow and hillslope …Bundesamt für Umwelt BAFU https://www.bafu.admin.ch › bafu › naturgefahren</p>
+      <p class="author">Автор: Александр Баринов</p>
+      </details>
+    </div>
+  </section>
+
+
 
   <section class="section" id="faq">
     <div class="wrap">
@@ -371,6 +346,8 @@ img,svg{max-width:100%;display:block}
         <details><summary>Сколько служат селеудерживающие барьеры Геобругг?</summary><p>Расчётный срок полезной эксплуатации систем «Геобругг» достигает 90 лет и зависит от агрессивности среды — его определяют индивидуально. Стандартная строительная гарантия на выполненные работы — один год.</p></details>
         <details><summary>Нужны ли изыскания и расчёт перед установкой барьера?</summary><p>Да. Барьер подбирают по обследованию водосбора и расчёту расхода, объёма выноса и давления потока. Без этого рассчитать конструкцию и её анкеровку нельзя.</p></details>
         <details><summary>Что делать при угрозе селя?</summary><p>При угрозе селя по сигналу МЧС нужно немедленно уйти вверх по склону на безопасную высоту, прочь из русла и лощины. Инженерная защита снижает риск для объектов, но не отменяет систему оповещения и эвакуации.</p></details>
+        <details><summary>В каких руслах работает гибкий барьер и как его закрепляют?</summary><p>Гибкие селеудерживающие барьеры эффективны в сравнительно узких руслах с чётко выраженными бортами (ориентировочно до нескольких десятков метров по ширине). Несущие канаты закрепляют в коренную породу тросовыми и буроинъекционными анкерами, а после схода селя площадку осматривают и расчищают от накопленного материала. Точные параметры задаёт расчёт по водосбору.</p></details>
+        <details><summary>Какими нормативными документами регламентируется защита от селей?</summary><p>Защита от селей проектируется по строительным нормам — <a href="https://docs.cntd.ru/document/1200037378" rel="noopener" target="_blank">СП 116.13330</a> «Инженерная защита территорий, зданий и сооружений от опасных геологических процессов», а также по СП 115.13330 «Геофизика опасных природных воздействий» и СНиП 22-02-2003.</p></details>
       </div>
     </div>
   </section>
